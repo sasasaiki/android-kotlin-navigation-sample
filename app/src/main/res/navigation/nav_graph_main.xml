@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/mainActivityFragment">
+
+    <fragment
+        android:id="@+id/mainActivityFragment"
+        android:name="app.saiki.navigationsample.MainActivityFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainActivityFragment_to_subFragment"
+            app:destination="@id/subFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/subFragment"
+        android:name="app.saiki.navigationsample.SubFragment"
+        android:label="fragment_sub"
+        tools:layout="@layout/fragment_sub" />
+</navigation>
